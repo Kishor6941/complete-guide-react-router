@@ -1,0 +1,25 @@
+.navbar-course {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.navbar-course ul{
+    display: flex;
+    margin-left : 14px;
+}
+
+.navbar-course ul li {
+    list-style-type: none;
+    margin-right: 20px;
+    display: flex;
+   justify-content: center;
+}
+
+.navbar-course ul li a {
+    text-decoration: none;
+}
+
+.active {
+    border-bottom: 2px solid green;
+    padding-bottom: 4px;
+}
