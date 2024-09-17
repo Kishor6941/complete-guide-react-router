@@ -1,8 +1,10 @@
 .navbar {
-  background-color: bisque;
+  background-color: #333;
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 
 .navbar ul {
@@ -17,6 +19,7 @@
 
 .navbar ul li a {
   text-decoration: none;
+  color: #fff;
 }
 
 .navbar .active {
@@ -27,7 +30,7 @@
 .login-btn{
   border: none;
   padding: 10px;
-  background-color: #000;
+  background-color: green;
   color: white;
   border-radius: 50px;
   cursor: pointer;
@@ -36,4 +39,8 @@
 .login-btn:hover{
   transition: 0.3s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.access{
+  pointer-events: none;
+  opacity:0.6;
 }

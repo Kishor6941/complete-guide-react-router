@@ -1,6 +1,8 @@
 .navbar-course {
     margin-top: 20px;
     margin-bottom: 30px;
+    position: sticky;
+    top: 100px;
 }
 
 .navbar-course ul{
