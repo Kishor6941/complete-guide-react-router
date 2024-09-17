@@ -1,21 +1,20 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import "./Navbar.css"
 import { toast } from 'react-toastify';
+import { globalContext } from '../../context/GlobalContext';
 
 const Navbar = () => {
-  const [isLogin, setIsLogin] = useState(false)
+   let {isLogin, setIsLogin}  = useContext(globalContext)
   let navigate = useNavigate()
 
   let login = () => {
     setIsLogin(!isLogin)
     if(isLogin) {
-      localStorage.setItem('isLogin',false)
       navigate('/')
-      toast("Logout successfully")
+      toast.warn("Logout successfully")
     } else {
-      localStorage.setItem('isLogin',true)
-      toast("Login successfully")
+      toast.success("Login successfully")
     }
   }
 
@@ -25,7 +24,7 @@ const Navbar = () => {
     <nav>
         <ul className='navbar-ui'>
         <li className='navbar-ul-li'><NavLink to="/">Home</NavLink></li>
-        <li className={!JSON.parse(localStorage.getItem("isLogin")) ? 'access' : ''}><NavLink to="/courses">Courses</NavLink></li>
+        <li className={!isLogin ? 'access' : ''}><NavLink to="/courses">Courses</NavLink></li>
         <li className='navbar-ul-li'><NavLink to="/about">About</NavLink></li>
         <li className='navbar-ul-li'><NavLink to="/contact">Contact</NavLink></li>
         </ul>

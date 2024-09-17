@@ -3,8 +3,8 @@ import { Outlet, Navigate } from "react-router-dom";
 import { globalContext } from "../context/GlobalContext";
 
 const ProtectedRoutes = () => {
- let token = useContext(globalContext)
-return token ? (
+ let isLogin = useContext(globalContext)
+return isLogin ? (
     <Outlet />
   ) : (
      <Navigate to="/" />

@@ -1,12 +1,13 @@
 import { createContext } from "react";
-
+import { useState } from "react";
 export const globalContext = createContext(null);
 
 
-
 const GlobalContainer = (props) => {
+    const [isLogin, setIsLogin] = useState(false)
     const contextValue = {
-        name : "Kishor Phawade"
+        isLogin,
+        setIsLogin
     }
     
     return (
