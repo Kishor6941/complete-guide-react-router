@@ -1,9 +1,12 @@
 import React, { Suspense } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+
 import { ToastContainer } from "react-toastify";
 import ProtectedRoutes from "./utlis/ProtectedRoutes";
+
+import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+
 const Home = React.lazy(() => import("./components/Home/Home"));
 const About = React.lazy(() => import("./components/About/About"));
 const Contact = React.lazy(() => import("./components/Contacts/Contact"));
@@ -14,6 +17,12 @@ const CourseList = React.lazy(() =>
 const CourseAuthor = React.lazy(() =>
   import("./components//CourseAuthor/CourseAuthor")
 );
+
+const PageNotFound = React.lazy(() =>
+  import("./components/PageNotFound/PageNotFound")
+);
+
+const CourseAuthorChild = React.lazy(() => import("./components/CourseAuthorChild/CourseAuthorChild"))
 
 const App = () => {
   return (
@@ -27,16 +36,18 @@ const App = () => {
           <Route element={<ProtectedRoutes />}>
             <Route path="/courses" element={<Courses />}>
               <Route index element={<CourseList />} />
-              <Route path="course-author" element={<CourseAuthor />} />
+              <Route path="course-author" element={<CourseAuthor />}>
+                <Route index element={<CourseAuthorChild />}/>
+              </Route>
             </Route>
           </Route>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Suspense>
       <Footer />
-    {/* </div> */}
+      {/* </div> */}
     </>
   );
 };
