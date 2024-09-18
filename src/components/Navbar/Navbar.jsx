@@ -27,6 +27,7 @@ const Navbar = () => {
         <li className={!isLogin ? 'access' : ''}><NavLink to="/courses">Courses</NavLink></li>
         <li className='navbar-ul-li'><NavLink to="/about">About</NavLink></li>
         <li className='navbar-ul-li'><NavLink to="/contact">Contact</NavLink></li>
+        <li className='navbar-ul-li'><NavLink to="/post">Post</NavLink></li>
         </ul>
     </nav>
     <nav>

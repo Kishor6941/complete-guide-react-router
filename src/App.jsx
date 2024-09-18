@@ -6,6 +6,7 @@ import ProtectedRoutes from "./utlis/ProtectedRoutes";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import Posts from "./components/Posts/Posts";
 
 const Home = React.lazy(() => import("./components/Home/Home"));
 const About = React.lazy(() => import("./components/About/About"));
@@ -40,6 +41,7 @@ const App = () => {
                 <Route index element={<CourseAuthorChild />}/>
               </Route>
             </Route>
+            <Route path="/post" element={<Posts />} />
           </Route>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
