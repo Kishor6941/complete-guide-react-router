@@ -7,6 +7,10 @@ import ProtectedRoutes from "./utlis/ProtectedRoutes";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Posts from "./components/Posts/Posts";
+// import LearnCSS from "./components/Learn flexbox/LearnCSS";
+const LearnCSS = React.lazy(() =>
+  import("./components/Learn flexbox/LearnCSS")
+);
 
 const Home = React.lazy(() => import("./components/Home/Home"));
 const About = React.lazy(() => import("./components/About/About"));
@@ -23,7 +27,9 @@ const PageNotFound = React.lazy(() =>
   import("./components/PageNotFound/PageNotFound")
 );
 
-const CourseAuthorChild = React.lazy(() => import("./components/CourseAuthorChild/CourseAuthorChild"))
+const CourseAuthorChild = React.lazy(() =>
+  import("./components/CourseAuthorChild/CourseAuthorChild")
+);
 
 const App = () => {
   return (
@@ -38,17 +44,18 @@ const App = () => {
             <Route path="/courses" element={<Courses />}>
               <Route index element={<CourseList />} />
               <Route path="course-author" element={<CourseAuthor />}>
-                <Route index element={<CourseAuthorChild />}/>
+                <Route index element={<CourseAuthorChild />} />
               </Route>
             </Route>
             <Route path="/post" element={<Posts />} />
           </Route>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/learn" element={<LearnCSS />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Suspense>
-      <Footer />
+      {/* <Footer /> */}
       {/* </div> */}
     </>
   );

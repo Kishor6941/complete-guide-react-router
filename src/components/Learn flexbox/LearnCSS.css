@@ -1,0 +1,12 @@
+
+.one, .two, .three {
+    display: inline-block;
+    /* display: inline; */
+    /* display: block; */
+    height: 100px;
+    width: 100px;
+    border: 1px solid green;
+    margin : 10px;
+    text-align: center;
+}
+
