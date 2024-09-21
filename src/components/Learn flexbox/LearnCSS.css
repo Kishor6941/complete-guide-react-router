@@ -1,12 +1,32 @@
-
+/* 
 .one, .two, .three {
     display: inline-block;
-    /* display: inline; */
-    /* display: block; */
+    display: inline;
+    display: block;
     height: 100px;
     width: 100px;
     border: 1px solid green;
     margin : 10px;
     text-align: center;
+} */
+.main-container div{
+    height: 100px;
+    width: 100px;
+    border: 1px solid green;   
+    margin : 10px;
 }
 
+.main-container{
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    /* flex-direction: row;
+    flex-wrap: wrap-reverse; */
+    flex-flow: row wrap;     
+    /* flex-flow is combination of flex-direction and flex-wrap */
+    /* flex-wrap: nowrap; */
+}
