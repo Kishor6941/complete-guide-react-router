@@ -3,3 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+button {
+  padding:10px;
+  display : flex;
+  margin-right : 10px;
+  border-radius: 8px;
+}
+button:hover{
+  cursor : pointer;
+  border-color: 1px solid #646cff;
+}
+
+button.selected  {
+background-color: #646cff;
+color: white;
+border : none;
+border-radius: 8px;
+}

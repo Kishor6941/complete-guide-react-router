@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
@@ -10,6 +10,7 @@ import PostContainer from "./context/PostsContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <Suspense fallback="Loading....">
     <BrowserRouter>
       <GlobalContainer>
         <PostContainer>
@@ -17,5 +18,6 @@ createRoot(document.getElementById("root")).render(
         </PostContainer>
       </GlobalContainer>
     </BrowserRouter>
+    </Suspense>
   </StrictMode>
 );
