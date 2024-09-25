@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
-import "./Navbar.css"
+import "./Navbar.scss"
 import { toast } from 'react-toastify';
 import { globalContext } from '../../context/GlobalContext';
 
@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <>
     <div className='navbar'>
-    <nav>
+    <nav className='left-nav'>
         <ul className='navbar-ui'>
         <li className='navbar-ul-li'><NavLink to="/">Home</NavLink></li>
         <li className={!isLogin ? 'access' : ''}><NavLink to="/courses">Courses</NavLink></li>
@@ -31,7 +31,7 @@ const Navbar = () => {
         <li className='navbar-ul-li'><NavLink to="/learn">CSS Layout</NavLink></li>
         </ul>
     </nav>
-    <nav>
+    <nav className='right-nav'>
       <ul>
         <li> <button onClick={login} className='login-btn'>{!isLogin ? 'Login' : 'Logout'}</button> </li>
       </ul>

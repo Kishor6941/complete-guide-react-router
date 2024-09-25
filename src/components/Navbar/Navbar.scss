@@ -1,0 +1,52 @@
+@import "../../styles/color-variables.scss";
+.navbar {
+  background-color: $nav-color;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  .left-nav {
+    ul {
+      display: flex;
+      li {
+        margin-right: 30px;
+        list-style-type: none;
+        font-size: 22px;
+        a {
+          text-decoration: none;
+          color: $white-color;
+        }
+
+        .active {
+          border-bottom: 2px solid;
+          padding-bottom: 3px;
+        }
+      }
+      .access {
+        pointer-events: none;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .right-nav {
+    ul {
+      li {
+        .login-btn {
+          border: none;
+          padding: 10px;
+          background-color: $main-color;
+          color: $white-color;
+          border-radius: 50px;
+          cursor: pointer;
+        }
+
+        .login-btn:hover {
+          transition: 0.3s;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+      }
+    }
+  }
+}

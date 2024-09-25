@@ -1,3 +1,4 @@
+@import "../../styles/color-variables.scss";
 .not-found-container {
   display: flex;
   flex-direction: column;
@@ -10,7 +11,7 @@
 
 .not-found-container h1 {
   font-size: 6rem;
-  color: #ff6b6b;
+  color: $tomato-color;
   margin: 0;
 }
 
@@ -24,11 +25,11 @@
   padding: 10px 20px;
   font-size: 1.2rem;
   color: white;
-  background-color: #4caf50;
+  background-color: $main-color;
   text-decoration: none;
   border-radius: 5px;
 }
 
 .home-link:hover {
-  background-color: #45a049;
+  background-color: $main-color;
 }

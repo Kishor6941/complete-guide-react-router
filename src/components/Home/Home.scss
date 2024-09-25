@@ -1,3 +1,5 @@
+@import "../../styles/color-variables.scss";
+
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -10,7 +12,7 @@ header {
 }
 
 header h1 {
-  color: #4caf50;
+  color: $main-color;
 }
 
 .content-section {
@@ -19,7 +21,7 @@ header h1 {
 
 .content-section h2 {
   margin-bottom: 10px;
-  color: #4caf50;
+  color: $main-color;
 }
 
 .content-section p {
