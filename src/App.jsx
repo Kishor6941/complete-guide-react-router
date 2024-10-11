@@ -7,6 +7,8 @@ import ProtectedRoutes from "./utlis/ProtectedRoutes";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Posts from "./components/Posts/Posts";
+import ClickCounter from "./learncustomHookComp/ClickCounter";
+import HoverCounter from "./learncustomHookComp/HoverCounter";
 // import LearnCSS from "./components/Learn flexbox/LearnCSS";
 const LearnCSS = React.lazy(() =>
   import("./components/Learn flexbox/LearnCSS")
@@ -57,6 +59,9 @@ const App = () => {
       </Suspense>
       {/* <Footer /> */}
       {/* </div> */}
+
+      <ClickCounter />
+      <HoverCounter />
     </>
   );
 };
