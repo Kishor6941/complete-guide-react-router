@@ -1,13 +1,14 @@
 import useCounter from '../customHook/useCounter'
+import HOC from '../HOC/WithCounter'
 
-const ClickCounter = () => {
+const ClickCounter = ({counter, incrementCounter}) => {
 //     const [counter, setCounter] = useState(0);
 
 //    let incrementCounter = () => {
 //         setCounter(prev => prev + 1)
 //     }
 
-let [counter, incrementCounter] = useCounter();
+// let [counter, incrementCounter] = useCounter();
 
   return (
     <div>
@@ -16,4 +17,4 @@ let [counter, incrementCounter] = useCounter();
   )
 }
 
-export default ClickCounter
+export default HOC(ClickCounter)
